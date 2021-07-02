@@ -69,6 +69,9 @@
                                                     <li class="menu-item" >
                                                         <a title="All Products" href="{{ route('admin.products') }}">All Products</a>
                                                     </li>
+                                                    <li class="menu-item" >
+                                                        <a title="Home Slider" href="{{ route('admin.homeSlider') }}">Home Slider</a>
+                                                    </li>
 													<li class="menu-item menu-item-has-children parent">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('user-logout').submit();">Logout</a>
 													</li>

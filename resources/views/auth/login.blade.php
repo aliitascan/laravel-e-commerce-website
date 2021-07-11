@@ -73,11 +73,11 @@
 									</fieldset>
 									<fieldset class="wrap-input">
 										<label for="frm-login-uname">Email Address:</label>
-										<input type="email" id="frm-login-uname" name="email" placeholder="Type your email address" value="{{ old('email') }}" required autofocus>
+										<input type="email" id="frm-login-uname" name="email" placeholder="Type your email address" value="aliitascan@gmail.com{{-- old('email') --}}" required autofocus>
 									</fieldset>
 									<fieldset class="wrap-input">
 										<label for="frm-login-pass">Password:</label>
-										<input type="password" id="frm-login-pass" name="password" placeholder="************" required autocomplete="current-password">
+										<input type="password" id="frm-login-pass" name="password" placeholder="************" value="12345678" required autocomplete="current-password">
 									</fieldset>
 									
 									<fieldset class="wrap-input">

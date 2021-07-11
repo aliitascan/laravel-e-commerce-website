@@ -1,5 +1,13 @@
 <main id="main" class="main-site">
-
+	<style>
+		.regPrice {
+			display: block !important;
+			font-weight: 300 !important;
+			font-size: 13px !important;
+			color: #aaaaaa !important;
+			text-decoration: line-through;
+		}
+	</style>
 		<div class="container">
 
 			<div class="wrap-breadcrumb">
@@ -39,7 +47,16 @@
 							<div class="wrap-social">
 								<a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png') }}" alt=""></a>
 							</div>
-							<div class="wrap-price"><span class="product-price">${{ $product->regularPrice }}</span></div>
+							@if ($product->salePrice > 0)
+								<div class="wrap-price">
+									<del><span class="product-price regPrice">${{ $product->regularPrice }}</span></del>
+									<span class="product-price">${{ $product->salePrice }}</span>
+								</div>
+							@else
+								<div class="wrap-price">
+									<span class="product-price">${{ $product->regularPrice }}</span>
+								</div>
+							@endif
 							<div class="stock-info in-stock">
 								<p class="availability">Availability: <b>{{ $product->stockStatus }}</b></p>
 							</div>
